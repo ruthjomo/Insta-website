@@ -24,6 +24,6 @@ from django.conf.urls import url,include
 from django.contrib import admin
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^instApp/',include('instApp.urls'))
+    url('admin/', admin.site.urls),
+    url('instApp/',include('instApp.urls'))
 ]
