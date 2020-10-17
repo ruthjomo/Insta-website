@@ -1,8 +1,10 @@
 from django.conf.urls import url
-from . import views
+from django.urls import path ,include
+from .views import PostListView
 
-urlpatterns=[
-    # url('^$',views.welcome,name = 'welcome'),
-     url('^$',views.signup, name='signup'),
-    
+
+app_name = "instApp"
+
+urlpatterns =[
+    url('',PostListView.as_view(),name='post_list'),
 ]
