@@ -1,0 +1,50 @@
+body{
+    background-color:#ffff;
+}
+header{
+    background-color:#ffff;
+    border-bottom:1px solid #ccc;
+    position:fixed;
+    left:0;
+    top:0;
+    width:100%;
+}
+.navigation{
+    display:flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content:center;
+    padding:26px 20px;
+    flex-wrap:wrap;
+}
+.navigation a{
+    color:#111;
+
+}
+.instagram-logo{
+    display:flex;
+    flex-direction:row;
+    justify-content:flex-start;
+    width:30%;
+}
+.instagram-logo a{
+    font-size:25px;
+    padding-left:10px;
+
+}
+.vl{
+    border-left:1.5px solid #111;
+    height:35px;
+    margin-left:25px;
+}
+.contact_icons{
+    display:flex;
+    justify-content: flex-end;
+    width:30%;
+    padding-left:100px;
+}
+.contact_icons{
+    padding-left: 30px;
+    font-size: 25px;
+    font-weight: lighter;
+}
