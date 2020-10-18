@@ -65,3 +65,8 @@ header{
     top: 100px; 
     left: 0px;
 }
+.card{
+    background-color: white;
+    margin: 0 auto;
+    
+}

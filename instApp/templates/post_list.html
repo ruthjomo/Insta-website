@@ -13,8 +13,27 @@
            </div>
            <div class="post-options"><i class="fa fa-ellipsis-h"></i></div>
            <div class="post-image">
-               <img src=".images/"
+              
            </div>
+           <div class="engagement">
+               <a href=""><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+               <a href=""><i class="fa fa-comment-o" aria-hidden="true"></i></a>
+               <a href=""><i class="fa fa-share-square" aria-hidden="true"></i></a>
+               <a href=""><i class="fa fa-bookmark-o" aria-hidden="true"></i></a>
+
+           </div>
+           <div class="likes">
+               <a href="">50</a>
+           </div>
+           <div class="caption">
+           <a href=""><h2>{{ post.author }}</h2></a>
+           <span><p>{{ post.caption }}</p></span>
+        </div>
+        <div class="time-posted">
+            {{ post.created_date | timesince }} ago
+
+        </div>
+
 
        </div>
 

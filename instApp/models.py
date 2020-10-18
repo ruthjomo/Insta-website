@@ -7,6 +7,7 @@ class Post(models.Model):
     author = models.ForeignKey('auth.User',on_delete = models.CASCADE)
     image = ImageField(blank=True,null=True)
     caption = models.TextField()
+    location = models
     created_date = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
