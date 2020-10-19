@@ -1,20 +1,21 @@
 {% extends 'base.html' %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/insta.css'%}">
 
 {% block content %}
    {% for post in posts%}
-   <div class='card'>
+   <div class="card">
        <div class="card-header">
            <div class="profile-image">
 
            </div>
            <div class="post-info">
                <div class="post-name">{{ post.author }}</div>
-               <div class="post-location"></div>
+               <div class="post-location">Nairobi</div>
            </div>
            <div class="post-options"><i class="fa fa-ellipsis-h"></i></div>
-           <div class="post-image">
-              
-           </div>
+        </div>
+           <div class="post-image"></div>
            <div class="engagement">
                <a href=""><i class="fa fa-heart-o" aria-hidden="true"></i></a>
                <a href=""><i class="fa fa-comment-o" aria-hidden="true"></i></a>
@@ -33,12 +34,6 @@
             {{ post.created_date | timesince }} ago
 
         </div>
-
-
-       </div>
-
-   </div>
-   <!-- <p>{{post.author}}</p>
-   <p>{{post.caption}}</p> -->
-   {% endfor %}
+</div>
+{% endfor %}
 {% endblock%}
