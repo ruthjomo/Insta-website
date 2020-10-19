@@ -13,6 +13,8 @@ class PostCreateView(CreateView) :
     template = "/post_create.html" 
     from_class = PostForm 
     queryset = post.objects.all()
+    #To return users to main page after every post
+    success_url = '/'
 
     def form_valid(self,form):
         print(form.cleaned_data)
