@@ -10,9 +10,9 @@ class PostListView(ListView):
     context_object_name = "posts"
 
 class PostCreateView(CreateView) :
-    template = "/post_create.html" 
-    from_class = PostForm 
-    queryset = post.objects.all()
+    template_name = "post_create.html" 
+    form_class = PostForm 
+    queryset = Post.objects.all()
     #To return users to main page after every post
     success_url = '/'
 

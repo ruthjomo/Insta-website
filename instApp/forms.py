@@ -1,15 +1,15 @@
 from django import forms
 from .models import Post
-from crispy_forms.helper import formhelper
-from crispy_forms.layout import submit,Layout,field
+from crispy_forms.helper import FormHelper
+from crispy_forms.layout import Submit,Layout,Field
 
-class PostForm(forms.modelform):
-      helper = formhelper()
+class PostForm(forms.ModelForm):
+      helper = FormHelper()
       helper.form_method = 'POST'
-      helper.add_input(submit('post','post',css_class='btn-primary'))
+      helper.add_input(Submit('Post','Post',css_class='btn-primary'))
 
       class meta:
-          model = post
+          model = Post
           fields = [
               'image',
               'caption'
