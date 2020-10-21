@@ -1,40 +1,26 @@
-{% load static %}
-
+{% load bootstrap3 %}
+{% load static%}
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="utf-8">
 
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="{% static 'css/insta.css'%}" >
+  {% if title %}
+  <title>Instagram - {{title}}</title>
+  {% else %}
+    <title> Instagram </title>
+  {% endif %}
+
+  {% block styles %}
+    {% bootstrap_css %}
+    <link rel="stylesheet" href="{% static 'css/insta.css' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap" rel="stylesheet">
+  {% endblock %}
 
 </head>
 <body>
-    <header>
-        <div class="navigation">
-            <div class="instagram">
-            <a href="/">Instagram</a>
-            </div>
-            <div class="search-bar">
-                <input type="text" placeholder="search">
-                <a class="search" href=""><i class="fa fa-search"></i></a>
-            </div>
-            
-            <div class="contact_icons">
-                <a class="home"><i class="fa fa-home"></i></a>
-                <a class="explore"><i class="fa fa-compass"></i></a>
-                <a class="likes"><i class="fa fa-heart-o"></i></a>
-                <a class="profile"><i class="fa fa-user-o"></i></a>
-            </div>
-        </div>
-    </header>
-    <div class="content-container">
-        {% block content%}
-        {% endblock %}
-    </div>
-    
-</body>
-</html>
+    {% include 'navbar.html' %}
+
+    {% block content %}
+    {%endblock%}

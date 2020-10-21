@@ -10,15 +10,20 @@ header{
     width:100%;
 }
 .navigation{
+   
+    
     display:flex;
     flex-direction: row;
     text-align: center;
     justify-content:center;
     padding:26px 20px;
     flex-wrap:wrap;
+    
+    
 }
 .navigation a{
     color:#111;
+    
 
 }
 .instagram{
